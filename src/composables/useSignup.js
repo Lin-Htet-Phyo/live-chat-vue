@@ -19,11 +19,11 @@ const createAccount = async (email, password, displayName) => {
       displayName,
     });
 
-    console.log("Updated user:", userCredential.user);
+    // console.log("Updated user:", userCredential.user);
     return userCredential;
   } catch (err) {
-    error.value = err.message;
-    console.error("Signup error:", err);
+    error.value = "Could not create new user";
+    // console.error("Signup error:", err);
   }
 };
 
